@@ -1,88 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Create Facebook Account</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f0f2f5;
-      padding: 20px;
-    }
-
-    h1 {
-      color: blue;
-    }
-
-    .form-section {
-      background: rgb(255, 255, 255);
-      padding: 20px;
-      width: 400px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-
-    input[type="text"],
-    input[type="email"],
-    input[type="number"] {
-      padding: 8px;
-      margin: 5px;
-      width: 45%;
-    }
-
-    input[type="number"] {
-      width: 28%;
-    }
-
-    .gender input {
-      margin-right: 5px;
-    }
- 
-    button:hover {
-      background-color: #0e6eff;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+  
+    
 </head>
 <body>
-
-  <h1>facebook</h1>
-  <div class="form-section">
-    <h2>Create a new account</h2>
-    <h4>It's quick and easy</h4>
-
-    <form action="filename.jsp" method="GET">
-      <p>
-        <input type="text" placeholder="First name" required />
-        <input type="text" placeholder="Second name" required />
-      </p>
-
-      <p>Date of birth?</p>
-      <p>
-        <label>Day</label>
-        <label>Month</label>
-        <label>Year</label>
-      </p>
-      <p>
-        <input type="number" placeholder="Day" min="1" max="31" />
-        <input type="number" placeholder="Month" min="1" max="12" />
-        <input type="number" placeholder="Year" min="1900" max="2025" />
-      </p>
-
-      <fieldset class="gender">
-        <legend><b>Gender</b></legend>
-        <input type="radio" name="gender" value="male" /> Male
-        <input type="radio" name="gender" value="female" /> Female
-        <input type="radio" name="gender" value="custom" /> Custom
-      </fieldset>
-
-      <p>
-        <input type="email" placeholder="Email or phone number" required />
-      </p>
-
-      <button type="submit">Sign Up</button>
-    </form>
-  </div>
-
+     <h1 style="font-family: Arial; color: blue;">
+        facebook
+     </h1>
+     <h2 style="font-family: Arial">Create a new account</h2>
+     <h4>it's quick and easy</h4>
+     <form action="filename.jsp" method="GET">
+        <p><input type="text" placeholder="First name" /> <input type="text" placeholder="Second name" /></p>
+         <p>Date of birth?</p>
+      </form>
+      <form>
+        <p><label for="chk">Day</label> <label for="chk">month</label> <label for="chk">year</label></p>
+        <p><input type="number" min="10" max="20"><input type="number" min="10" max="20"><input type="number" min="10" max="20">    </p>
+         
+       
+     </form>
+     
+     <b><legend>Gender</legend></b>
+        <input type="radio" name="gender" />Male<input
+          type="radio"
+          name="gender"
+        />Female
+       
+<form >
+    <p><input type="email" placeholder="Email or phone number" /></p>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
 </body>
 </html>

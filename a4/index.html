@@ -5,19 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Create Facebook Account</title>
   <style>
- body {
-  font-family: Arial, sans-serif;
-  background-color: #f0f2f5;
-  height: 100vh;
-  margin: 0;
-  display: flex;
-  justify-content: center;  /* centers horizontally */
-  align-items: center;      /* centers vertically */
-}
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f2f5;
+      height: 100vh;
+      margin: 0;
+    }
 
+    /* Facebook heading styling */
+    .facebook-heading {
+      color: #1877f2;
+      text-align: center;
+      font-size: 48px;
+      font-weight: bold;
+      margin-top: 40px;
+    }
 
-    h1 {
-      color: rgb(4, 0, 255);
+    /* Container to center the form only */
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: calc(100vh - 120px); /* leave space for heading */
     }
 
     .form-section {
@@ -61,44 +70,47 @@
 </head>
 <body>
 
-  <h1 style="text-align: center;" >facebook</h1>
-  <div class="form-section">
+  <h1 class="facebook-heading">facebook</h1>
 
-    <h2>Create a new account</h2>
-    <h4>It's quick and easy</h4>
+  <div class="container">
+    <div class="form-section">
+      <h2>Create a new account</h2>
+      <h4>It's quick and easy</h4>
 
-    <form action="filename.jsp" method="GET">
-      <p>
-        <input type="text" placeholder="First name" required />
-        <input type="text" placeholder="Second name" required />
-      </p>
+      <form action="filename.jsp" method="GET">
+        <p>
+          <input type="text" placeholder="First name" required />
+          <input type="text" placeholder="Second name" required />
+        </p>
 
-      <p>Date of birth?</p>
-      <p>
-        <label>Day</label>
-        <label>Month</label>
-        <label>Year</label>
-      </p>
-      <p>
-        <input type="number" placeholder="Day" min="1" max="31" />
-        <input type="number" placeholder="Month" min="1" max="12" />
-        <input type="number" placeholder="Year" min="1900" max="2025" />
-      </p>
+        <p>Date of birth?</p>
+        <p>
+          <label>Day</label>
+          <label>Month</label>
+          <label>Year</label>
+        </p>
+        <p>
+          <input type="number" placeholder="Day" min="1" max="31" />
+          <input type="number" placeholder="Month" min="1" max="12" />
+          <input type="number" placeholder="Year" min="1900" max="2025" />
+        </p>
 
-      <fieldset class="gender">
-        <legend><b>Gender</b></legend>
-        <input type="radio" name="gender" value="male" /> Male
-        <input type="radio" name="gender" value="female" /> Female
-        <input type="radio" name="gender" value="custom" /> Custom
-      </fieldset>
+        <fieldset class="gender">
+          <legend><b>Gender</b></legend>
+          <input type="radio" name="gender" value="male" /> Male
+          <input type="radio" name="gender" value="female" /> Female
+          <input type="radio" name="gender" value="custom" /> Custom
+        </fieldset>
 
-      <p>
-        <input type="email" placeholder="Email or phone number" required />
-      </p>
+        <p>
+          <input type="email" placeholder="Email or phone number" required />
+        </p>
 
-      <button type="submit">Sign Up</button>
-    </form>
+        <button type="submit">Sign Up</button>
+      </form>
+    </div>
   </div>
 
 </body>
 </html>
+

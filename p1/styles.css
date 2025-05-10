@@ -110,12 +110,12 @@ header a{
 }
 
 .projects {
-  background: #e8eaf6;
+  background: #bdbdbd;
   padding: 30px;
 }
 
 .project-list {
-  display: flex;
+  display:flex;
   gap: 20px;
 }
 

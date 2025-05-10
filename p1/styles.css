@@ -10,13 +10,51 @@
 header {
     display: flex;
     justify-content: space-between;
-    background-color: blueviolet;
+    background-color: rgb(0, 94, 255);
     color: white;
     padding: 10px;
 }
 
-li {
+header li {
     display: inline-block;
     font-size: 20px;
     padding: 5px;
+}
+
+header a{
+    text-decoration: none;
+}
+
+.row {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.box {
+    width: 500px;
+    padding: 30px;
+}
+
+.btn-signup{
+    background-color: rgb(51, 0, 255);
+    margin-top: 10px;
+    padding:7px;
+    font-size: 20px;
+    border-radius: 10px;
+    border:none;
+}
+
+.summary {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.image {
+    border-radius: 50px;
+}
+
+.title {
+    font-size: 30px;
 }

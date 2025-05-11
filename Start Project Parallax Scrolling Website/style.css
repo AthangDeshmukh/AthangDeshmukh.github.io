@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background: #f9f9f9;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 2em;
+    color: #359381;
+    pointer-events: none;
+    margin-right:27px;
+}
+
+.navigation a{
+    text-decoration: none;
+    color: #359381;
+    padding: 6px 15px;
+    border-radius: 20px;
+    margin: 0 10px;
+    font-weight: 600;
+}
+
+.navigation a:hover{
+    background: #359381;
+    color: #f9f9f9;
+}
+
+.parallax {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#text{
+    position: absolute;
+    font-size: 5em;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0,0,.2);
+}
+
+.parallax img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+.sec{
+    position:relative;
+    /* top: px; */
+    background: #003329;
+    padding: 100px;
+     max-height: 100vh; /* Limits the height to the viewport */
+    overflow-y: auto;
+}
+
+.sec h2{
+    font-size: 3em;
+    color:#ffffff;
+    margin-bottom: 10px;
+}
+
+.sec p{
+    font-size: 1em;
+    color: #ffffff;
+    font-weight: 300;
+}
+.contact {
+    background: #359381;
+    color: #fff;
+    padding: 100px 50px;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.contact h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.contact h3 {
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.contact-details p {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.about {
+    background: #003329;
+    color: #fff;
+    padding: 100px 50px;
+    text-align: center;
+    margin-top: 100px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.about h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.about p {
+    font-size: 1.2em;
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+.about-values h2 {
+    font-size: 2em;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    color: #f9f9f9;
+}
+
+.about-values ul {
+    list-style: none;
+    padding: 0;
+}
+
+.about-values li {
+    font-size: 1.1em;
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+.about-image img {
+    margin-top: 30px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+
+
+.services {
+    background: #f9f9f9;
+    color: #003329;
+    padding: 100px 50px;
+    text-align: center;
+    margin-top: 100px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.services h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.services p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    line-height: 1.5;
+}
+
+.service-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.service-card {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.service-card img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+.service-card h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #359381;
+}
+
+.service-card p {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.5;
+}
+
+
+
+.footer {
+    background: #003329;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 10px;
+    margin-top: 0px;
+    border-top: 2px solid #359381;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 1em;
+    font-weight: 300;
+}
+
+.footer-links {
+    margin-top: 10px;
+}
+
+.footer-links a {
+    color: #359381;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1em;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}

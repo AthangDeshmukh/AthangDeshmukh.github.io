@@ -1,17 +1,14 @@
 const products = [
-  { id: 1, name: "Product 1", price: 34, status:"pending" },
-  { id: 2, name: "Product 2", price: 56, status:"pending" },
-  { id: 3, name: "Product 3", price: 40, status:"pending" },
+  { name: "Product 1", price: 34 },
+  { name: "Product 2", price: 56 },
+  { name: "Product 3", price: 40 }
 ];
 
-const list = products.map(product => ({
-  
-  ...product,
-  status: "completed",
-  price: product.price + 5
+// Using spread operator to create a new array (copy)
+const productsCopy = [...products];
 
-}));
+const total = productsCopy.reduce((sum, p) => sum + p.price, 0);
 
-list.forEach(product => {
-  console.log(`${product.name}: ${product.price},${product.status}`);
-});
+console.log("Total Price:", total);
+
+document.body.insertAdjacentHTML('beforeend', `<h2>Total Price: $${total}</h2>`);

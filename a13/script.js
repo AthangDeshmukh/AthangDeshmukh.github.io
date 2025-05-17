@@ -10,3 +10,11 @@ let updatedFruits = fruits.map(element => ({...element , total : element.price *
 updatedFruits.forEach(element => {
   console.log(element.name+" "+element.total);
 })
+ 
+let completedFruits = updatedFruits.filter(fruit => fruit.status === "completed");
+console.log(completedFruits);
+ 
+completedFruits.map(fruit => {
+  console.log(fruit.name + " " + fruit.total);
+});
+

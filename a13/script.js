@@ -1,20 +1,25 @@
-let fruits = [
+let product = [
   { id: 1, name: "Apple", price: 2 ,qty : 2, status : "pending" },
   { id: 2, name: "Orange", price: 3, qty : 2,status : "pending"  },
   { id: 3, name: "Mango", price: 4 ,qty : 2, status : "pending" },
 ];
 
-let updatedFruits = fruits.map(element => ({...element , total : element.price * element.qty , status : "completed" , }));
+// let updatedFruits = fruits.map(element => ({...element , total : element.price * element.qty , status : "completed" , }));
  
 
-updatedFruits.forEach(element => {
-  console.log(element.name+" "+element.total);
-})
+// updatedFruits.forEach(element => {
+//   console.log(element.name+" "+element.total);
+// })
  
-let completedFruits = updatedFruits.filter(fruit => fruit.status === "completed");
-console.log(completedFruits);
+// let completedFruits = updatedFruits.filter(fruit => fruit.status === "completed");
+// console.log(completedFruits);
  
-completedFruits.map(fruit => {
-  console.log(fruit.name + " " + fruit.total);
+// completedFruits.map(fruit => {
+//   console.log(fruit.name + " " + fruit.total);
+// });
+ const cart  = {1:7,3:5}
+
+products.map(value=>{
+    console.log(value.id, value.name, value.qty, value.price * value.qty);
 });
 

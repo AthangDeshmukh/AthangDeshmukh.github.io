@@ -1,14 +1,12 @@
-const products = [
-  { name: "Product 1", price: 34 },
-  { name: "Product 2", price: 56 },
-  { name: "Product 3", price: 40 }
+let fruits = [
+  { id: 1, name: "Apple", price: 250 ,qty : 2, status : "pending" },
+  { id: 2, name: "Orange", price: 100, qty : 2,status : "pending"  },
+  { id: 3, name: "Mango", price: 80 ,qty : 2, status : "pending" },
 ];
 
-// Using spread operator to create a new array (copy)
-const productsCopy = [...products];
+let updatedFruits = fruits.map(element => ({...element , total : element.price * element.qty , status : "completed" , }));
+ 
 
-const total = productsCopy.reduce((sum, p) => sum + p.price, 0);
-
-console.log("Total Price:", total);
-
-document.body.insertAdjacentHTML('beforeend', `<h2>Total Price: $${total}</h2>`);
+updatedFruits.forEach(element => {
+  console.log(element.name+" "+element.total);
+})

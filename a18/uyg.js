@@ -1,7 +1,7 @@
-// function add(...nums) {
-//     let sum = nums.reduce((acc, curr) => acc + curr, 0);
-//     console.log("Sum:", sum);
-// }
+function add(...nums) {
+    let sum = nums.reduce((acc, curr) => acc + curr, 0);
+    console.log("Sum:", sum);
+}
 const products = [
     { id: 1, name: "Product 1", price: 100 },
     { id: 2, name: "Product 2", price: 200 },

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cart - Fruit Mart</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .cart-heading {
+      text-align: center;
+      margin: 30px 0 20px 0;
+      color: #1f1e1e;
+    }
+    .cart-container {
+      max-width: 600px;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      padding: 30px 20px;
+    }
+    .cart-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #eee;
+      padding: 12px 0;
+    }
+    .cart-item:last-child {
+      border-bottom: none;
+    }
+    .cart-item-name {
+      font-weight: bold;
+      color: #359381;
+    }
+    .cart-item-price {
+      color: #007b5e;
+    }
+    .empty-cart {
+      text-align: center;
+      color: #888;
+      margin: 40px 0;
+    }
+  </style>
+</head>
+<body>
+  <h1 class="cart-heading">Your Cart</h1>
+  <div class="cart-container" id="cart-container">
+    <div class="empty-cart">No products in cart.</div>
+  </div>
+
+  <script>
+    const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+    const cartContainer = document.getElementById('cart-container');
+    cartContainer.innerHTML = '';
+
+    if (cartItems.length === 0) {
+      cartContainer.innerHTML = '<div class="empty-cart">No products in cart.</div>';
+    } else {
+      cartItems.forEach(item => {
+        const div = document.createElement('div');
+        div.className = 'cart-item';
+        div.innerHTML = `
+          <span class="cart-item-name">${item.name}</span>
+          <span>Qty: ${item.qty}</span>
+          <span class="cart-item-price">₹${item.price * item.qty}</span>
+        `;
+        cartContainer.appendChild(div);
+      });
+    }
+  </script>
+</body>
+</html>

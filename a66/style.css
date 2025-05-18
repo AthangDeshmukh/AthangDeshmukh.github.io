@@ -125,3 +125,22 @@ body {
     .view-cart-btn:hover {
       background-color: #e65100;
     }
+
+
+    .view-cart-btn a {
+  display: inline-block;
+  background-color: #ff9800;
+  color: #643838;
+  padding: 10px 22px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.view-cart-btn a:hover {
+  background-color: #ba8f70;
+  transform: scale(1.05);
+}

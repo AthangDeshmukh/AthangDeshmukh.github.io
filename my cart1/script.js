@@ -11,7 +11,14 @@ const addToCart = (id) => {
   // on box 1 is clicked, then if add button on box 3 is clicked then
   //cart object should be {1:1,3:1}
   // write code here....
-  cart[id] = 1;
+ const addToCart = (id) => {
+  if (cart[id]) {
+    cart[id] += 1; // increment if already in cart
+  } else {
+    cart[id] = 1;  // add new item with qty = 1
+  }
+  dispCart(); // update cart display
+};
   // console.log(cart);
 };
 

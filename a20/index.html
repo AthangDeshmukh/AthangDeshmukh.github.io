@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Email to Name Finder</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+    }
+    input, button {
+      padding: 10px;
+      font-size: 16px;
+      margin: 10px 0;
+    }
+    #result {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Find User Name by Email</h2>
+  <input type="email" id="inputField" placeholder="Enter email" required>
+  <button id="submitButton">Submit</button>
+
+  <div id="result"></div>
+
+  <script>
+    document.getElementById("submitButton").onclick = async function () {
+      const email = document.getElementById("inputField").value.trim();
+      const result = document.getElementById("result");
+      result.textContent = "";
+
+      if (!email) {
+        alert("Please enter an email id.");
+        return;
+      }
+
+      try {
+        const res = await fetch("https://jsonplaceholder.typicode.com/users");
+        const users = await res.json();
+        const user = users.find(u => u.email.toLowerCase() === email.toLowerCase());
+        if (user) {
+          result.textContent = "Name: " + user.name;
+        } else {
+          result.textContent = "No user found with this email.";
+        }
+      } catch (error) {
+        result.textContent = "Error fetching data.";
+        console.error(error);
+      }
+    };
+  </script>
+
+</body>
+</html>

@@ -1,25 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <h1>Bank ATM</h1>
-    <hr />
-    <section class="page">
-        <form action="">
-            <label for="cart">Card Number:</label>
-            <input type="text" id="cart" name="cart" required />
-            <br />
-            <label for="pin">PIN:</label>
-            <input type="password" id="pin" name="pin" required />
-            <br />
-            <button type="submit">Login</button>
-        </form>
-    </section>
-    <script src="script.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bank ATM</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Bank ATM</h1>
+  <hr />
+  <section class="page">
+    <form id="loginForm">
+      <label for="cart">Card Number:</label>
+      <input type="text" id="cart" name="cart" required />
+      <br />
+      <label for="pin">PIN:</label>
+      <input type="password" id="pin" name="pin" required />
+      <br />
+      <button type="submit">Login</button>
+    </form>
+
+    <!-- Actions section will appear after login -->
+    <div id="atm-actions" style="display:none; margin-top:20px;">
+      <h3 id="user-name"></h3>
+      <p id="balance"></p>
+
+      <select id="action-select">
+        <option value="">-- Select Action --</option>
+        <option value="deposit">Deposit</option>
+        <option value="withdraw">Withdraw</option>
+      </select>
+
+      <input type="number" id="amount" placeholder="Enter amount" min="1" />
+      <button id="do-action">Submit</button>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
 </html>
